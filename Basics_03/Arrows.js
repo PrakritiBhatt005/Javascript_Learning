@@ -1,11 +1,8 @@
 const user = {
-    username: "prakriti",
-    age: 23,
-
-    welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`);  //
-        console.log(this);
+    username : "Prakriti",
+    age : 23,
+    welcomeMessage : function(){
+        console.log(`${this.username}, welcome to the website!`); // this refers to the current context   
     }
-
 }
-user.welcomeMessage()
+user.welcomeMessage();
