@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document Object Model (DOM)</title>
 </head>
-<body>
-    
+<body style = "background-color: #212121; color: #ffff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>   
 </body>
+<script>
+    const parent = document.querySelector('.parent')   //forEach can only be used in NodeList not HTML collection
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1]);  
+    console.log(parent.children[2].innerText);  
+</script>
+</script>
 </html>
