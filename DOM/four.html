@@ -13,10 +13,18 @@
 <script>
     function addLanguage(langName){
         const li = document.createElement('li');
-        li.innerHTML = `${langName}`;
+        li.innerHTML = `${langName}`; //with this approach we'll have to traverse the entire tree
         document.querySelector('.language').appendChild(li);
     }
     addLanguage("Python");
     addLanguage("TypeScript");
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("GoLang");
+    addOptiLanguage("C#");
 </script>
 </html>
