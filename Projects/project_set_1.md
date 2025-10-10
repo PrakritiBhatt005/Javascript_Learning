@@ -54,3 +54,15 @@ form.addEventListener('submit', function (e) {
   }
 });
 ```
+
+## Project 3 Solution
+
+```JavaScript
+const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock'); // can also be done this way
+
+setInterval(function(){
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+```
