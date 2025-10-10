@@ -63,6 +63,7 @@ const clock = document.getElementById('clock');
 
 setInterval(function(){
   let date = new Date();
+  // console.log(date.toLocaleTimeString()); // this would run in console
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
 ```
