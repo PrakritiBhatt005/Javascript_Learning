@@ -54,5 +54,3 @@ form.addEventListener('submit', function (e) {
   }
 });
 ```
-## sol
-#vhfg
