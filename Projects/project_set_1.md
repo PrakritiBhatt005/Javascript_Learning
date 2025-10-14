@@ -67,3 +67,4 @@ setInterval(function(){
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
 ```
+gukhk
