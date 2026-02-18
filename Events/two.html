@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Prakiti Bhatt</h2>
+    <button id = "stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Prakriti Bhatt");       
+    // },2000)
+    const sayPrakiti = function(){
+        console.log("Prakriti Bhatt");       
+    }
+    const changeTitle = function(){
+        document.querySelector('h2').innerHTML = "Hello World"
+        
+    }
+    setTimeout(changeTitle,2000);
+</script>
+</html>
