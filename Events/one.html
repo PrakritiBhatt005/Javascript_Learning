@@ -25,21 +25,28 @@
     // }
 
     //*USED NOW/NEW WAY OF USING*
-    document.getElementById('images').addEventListener('click',function(e){
-        console.log("Clicked inside the url");
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("Clicked inside the url");
         
-    },false)                                //false means event bubbling
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log("Owl Clicked")
-        e.stopPropagation()                 // used to prevent bubbling of event
-    },false)
+    // },false)                                //false means event bubbling
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("Owl Clicked")
+    //     e.stopPropagation()                 // used to prevent bubbling of event
+    // },false)
 
-    document.getElementById('google').addEventListener('click', function(e){
-        console.log("Google clicked");
-        e.preventDefault();               // we don't want to go to the google.com
-        e.stopPropagation();
-    },false)
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log("Google clicked");
+    //     e.preventDefault();               // we don't want to go to the google.com
+    //     e.stopPropagation();
+    // },false)
 
-
+    document.querySelector('images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        }
+    })
 </script>
 </html>
