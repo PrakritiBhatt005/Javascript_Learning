@@ -22,8 +22,23 @@
     // document.getElementById('owl').onclick = funtion(){
     //     alert("Owl Clicked")
     // }
-    document.getElementById('owl').addEventListener('click', function(){
-        alert('OWL Clicked')
-    })
+
+    //used now
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log("Clicked inside the url");
+        
+    },false)                                //false means event bubbling
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("Owl Clicked")
+        e.stopPropagation()                 // used to prevent bubbling of event
+    },false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        console.log("Google clicked");
+        e.preventDefault();               // we don't want to go to the google.com
+        e.stopPropagation();
+    },false)
+
+
 </script>
 </html>
