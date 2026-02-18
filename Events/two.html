@@ -13,13 +13,20 @@
     // setTimeout(function(){
     //     console.log("Prakriti Bhatt");       
     // },2000)
-    const sayPrakiti = function(){
+    const sayPrakiti = function(){   
         console.log("Prakriti Bhatt");       
     }
     const changeTitle = function(){
         document.querySelector('h2').innerHTML = "Hello World"
         
     }
-    setTimeout(changeTitle,2000);
+    const changeMe = setTimeout(changeTitle,2000);  // for setting time
+
+    //now for how to remove such time restraints
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("STOPPED");
+        
+    })
 </script>
 </html>
