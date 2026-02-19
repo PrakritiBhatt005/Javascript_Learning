@@ -81,3 +81,26 @@ async function consumePromiseFive(){   // when using async...await is also used
 }
 
 consumePromiseFive()
+
+// async function getAllUsers(){
+//     try{
+//         const response = await fetch("https://api.github.com/users/PrakritiBhatt005");
+//         const data = await response.json()
+//         console.log(data);   
+//     }catch(error){
+//         console.log("E:", error);
+        
+//     }   
+// }
+// getAllUsers()
+
+//using then and catch method
+
+fetch("https://api.github.com/users/PrakritiBhatt005")
+.then((response) => {
+    return response.json()
+}).then((data) => {
+    console.log(data);   
+}).catch((error) => console.log(error));
+
+
