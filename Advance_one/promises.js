@@ -17,3 +17,42 @@ new Promise(function(resolve, reject){
 }).then(function(){
     console.log("Promise 2 consumed");    
 })
+
+const PromiseThree = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve({                                 //inside resolve() object and array both can be declared
+            user : "Prakriti",
+            email : "prakritibhatt@gmail.com"
+        });       
+    },1000)
+})
+
+PromiseThree.then(function(user){
+    console.log(user);
+    
+})
+
+const PromiseFour = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+        if (!error){
+            resolve({
+            username : "Bhatt",
+            password : "ok123"
+        })
+        }else{
+            reject("Error: Something went wrong")
+        }
+    }, 1000)
+})
+
+PromiseFour.then((user)=>{                     //chaining (for more cleaner code)
+    console.log(user);
+    return user.username   
+}).then((username)=>{
+    console.log(username);    
+}).catch((error)=>{
+    console.log(error);    
+}).finally(()=>{
+    console.log("Promise is either resolved or rejected");        
+})
