@@ -20,3 +20,10 @@ class Teacher extends User{
 }
 const userOne = new Teacher("Uno","uno@gmail.com","unn@123")
 userOne.addUser()
+
+userOne.logMe()
+const userTwo = new User("Hina")
+
+userTwo.logMe()
+
+console.log(userOne instanceof User);
