@@ -15,8 +15,14 @@ createUser.prototype.increment = function(){
     this.score++
 }
 
-const user1 = createUser("Rakesh", 70)
-const user2 = createUser("Riya", 88)
+createUser.prototype.printMe = function(){
+    console.log(`Score is: ${this.score}`);    
+}
+
+const user1 = new createUser("Rakesh", 70)
+const user2 = new createUser("Riya", 88)
+
+user1.printMe()
 
 
 
